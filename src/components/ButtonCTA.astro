@@ -1,0 +1,11 @@
+---
+const { text } = Astro.props;
+import Arrow from "./icon/Arrow.astro";
+---
+
+<button type="button" class="flex items-center font-semibold gap-2 max-h-fit text-white bg-third px-4 py-2 rounded-lg hover:bg-secondary hover:cursor-pointer hover:scale-105 transition-all">
+	<div>
+		{text}
+	</div> 
+	<Arrow class="rotate-90"/>
+</button>

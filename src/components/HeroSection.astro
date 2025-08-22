@@ -1,0 +1,32 @@
+---
+import ButtonCTA from "./ButtonCTA.astro"
+---
+<div id="hero" class="p-28 px-8 lg:px-28">
+	<div class="grid grid-cols-1 lg:grid-cols-2 space-y-12 mb-12">
+		<h1 class="text-7xl font-bold space-y-4">
+			<p>Simple.</p>
+			<p>Authentic.</p>
+			<p>Stylist</p>
+		</h1>
+		<div class="flex justify-start items-end">
+			<div class="flex items-center">
+				<div class="hidden lg:block w-0.5 h-12 me-12 bg-black rotate-[25deg] antialiased"></div>
+				<div class="flex space-x-24">
+					<p class="font-bold">Get fashionable with our Hijab, <br class="hidden lg:block">Be stylist and Cozy.</p>
+					<ButtonCTA text="Explore"/>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="relative h-64">
+		<img class="rounded-lg absolute inset-0 h-full w-full object-cover " src="../src/assets/hijab-hero.jpg" alt="">
+	</div>
+	<div class="my-12 grid grid-cols-2 px-24">
+		<a href="#aliexpress" class="border-e-3 pe-12">
+			<img class="w-full h-full object-fill object-center" src="https://upload.wikimedia.org/wikipedia/commons/4/41/AliExpress_2024.svg" alt="">
+		</a>
+		<a href="#tokopedia" class="ps-12">
+			<img class="w-full h-full object-fill object-center" src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Tokopedia.svg" alt="">
+		</a>
+	</div>
+</div>
