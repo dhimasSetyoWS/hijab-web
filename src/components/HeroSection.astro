@@ -1,9 +1,9 @@
 ---
 import ButtonCTA from "./ButtonCTA.astro"
 ---
-<div id="hero" class="p-28 px-8 lg:px-28">
+<section id="hero" class="p-28 px-8 lg:px-28">
 	<div class="grid grid-cols-1 lg:grid-cols-2 space-y-12 mb-12">
-		<h1 class="text-7xl font-bold space-y-4">
+		<h1 class="text-6xl lg:text-7xl font-bold space-y-4">
 			<p>Simple.</p>
 			<p>Authentic.</p>
 			<p>Stylist</p>
@@ -21,12 +21,14 @@ import ButtonCTA from "./ButtonCTA.astro"
 	<div class="relative h-64">
 		<img class="rounded-lg absolute inset-0 h-full w-full object-cover " src="img/hijab-hero.jpg" alt="">
 	</div>
-	<div class="my-12 grid grid-cols-2 px-24">
-		<a href="#aliexpress" class="border-e-3 pe-12">
+
+	<p class="font-semibold my-8 text-center text-lg">Our Partner</p>
+	<div class="my-12 grid grid-cols-1 lg:grid-cols-2 px-24 gap-3 lg:gap-0">
+		<a href="#aliexpress" class="lg:border-e-3 lg:pe-12">
 			<img class="w-full h-full object-fill object-center" src="https://upload.wikimedia.org/wikipedia/commons/4/41/AliExpress_2024.svg" alt="">
 		</a>
-		<a href="#tokopedia" class="ps-12">
+		<a href="#tokopedia" class="lg:ps-12">
 			<img class="w-full h-full object-fill object-center" src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Tokopedia.svg" alt="">
 		</a>
 	</div>
-</div>
+</section>
