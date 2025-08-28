@@ -5,6 +5,7 @@
 @theme {
   --font-manrope: "Manrope", sans-serif; 
   --font-macondo : "Macondo", sans-serif;
+  --color-card : #E6CFA9;
   --color-main : #fff6f2;
   --color-secondary : #9d6c73;
   --color-third : #856176;

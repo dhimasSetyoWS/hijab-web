@@ -1,29 +1,67 @@
 ---
-
+import '@glidejs/glide/dist/css/glide.core.min.css';
+import '@glidejs/glide/dist/css/glide.theme.min.css';
 ---
 
 <section id="product" class="px-8 lg:px-28">
-	<div class="head-section mb-8 flex flex-col lg:flex-row lg:justify-between">
-		<div class="detail-head space-y-4">
-			<h2 class="text-4xl lg:text-6xl font-semibold max-w-md">Experience with extraordinary hijab style.</h2>
-			<p class="text-lg text-secondary">Here is our best hijab style with authenticity</p>
-		</div>
-		<div class="hidden font-macondo additional-head lg:flex flex-col gap-3">
-			<p class="p-3 text-lg font-bold text-secondary cursor-default border-e-2 py-1">Bring your most radiant hijab style.</p>
-		</div>
-	</div>
-	<div class="grid grid-cols-1 lg:grid-cols-3 gap-3">
-		<div class="relative hover:scale-110 hover:shadow-2xl hover:z-10 transition-all">
-			<div class="absolute inset-0 w-full h-full bg-gradient-to-t from-secondary to-50% rounded-lg"></div>
-			<img class="rounded-lg w-full h-full inset-0 object-cover object-center" src="/img/hijab1.jpg" alt="">
-		</div>
-		<div class="relative hover:scale-110 hover:shadow-2xl hover:z-10 transition-all">
-			<div class="absolute inset-0 w-full h-full bg-gradient-to-t from-secondary to-50% rounded-lg"></div>
-			<img class="rounded-lg w-full h-full inset-0 object-cover object-center" src="/img/hijab2.jpg" alt="">
-		</div>
-		<div class="relative hover:scale-110 hover:shadow-2xl hover:z-10 transition-all">
-			<div class="absolute inset-0 w-full h-full bg-gradient-to-t from-secondary to-50% rounded-lg"></div>
-			<img class="rounded-lg w-full h-full inset-0 object-cover object-center" src="/img/hijab3.jpg" alt="">
-		</div>
-	</div>
+    <div class="head-section mb-8 flex flex-col lg:flex-row lg:justify-between">
+        <div class="detail-head space-y-4">
+            <h2 class="text-4xl lg:text-6xl font-semibold max-w-md">Experience with extraordinary hijab style.</h2>
+            <p class="text-lg text-secondary">Here is our best hijab style with authenticity</p>
+        </div>
+        <div class="hidden font-macondo additional-head lg:flex flex-col gap-3">
+            <p class="p-3 text-lg font-bold text-secondary cursor-default border-e-2 py-1">Bring your most radiant hijab
+                style.</p>
+        </div>
+    </div>
+    
+    <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+                <li class="glide__slide">
+                    <div class="relative hover:shadow-2xl hover:z-10 transition-all">
+                        <div class="absolute inset-0 w-full h-full bg-gradient-to-t from-secondary to-50% rounded-lg"></div>
+                        <img class="rounded-lg w-full h-full inset-0 object-cover object-center" src="/img/hijab1.jpg" alt="Hijab Style 1" />
+                    </div>
+                </li>
+                <li class="glide__slide">
+                    <div class="relative hover:shadow-2xl hover:z-10 transition-all">
+                        <div class="absolute inset-0 w-full h-full bg-gradient-to-t from-secondary to-50% rounded-lg"></div>
+                        <img class="rounded-lg w-full h-full inset-0 object-cover object-center" src="/img/hijab2.jpg" alt="Hijab Style 2" />
+                    </div>
+                </li>
+                <li class="glide__slide">
+                    <div class="relative hover:shadow-2xl hover:z-10 transition-all">
+                        <div class="absolute inset-0 w-full h-full bg-gradient-to-t from-secondary to-50% rounded-lg"></div>
+                        <img class="rounded-lg w-full h-full inset-0 object-cover object-center" src="/img/hijab3.jpg" alt="Hijab Style 3" />
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/></svg>
+            </button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/></svg>
+            </button>
+        </div>
+    </div>
 </section>
+
+<script>
+    import Glide from '@glidejs/glide';
+
+    // Inisialisasi Glide.js dengan beberapa opsi
+    new Glide('.glide', {
+        type: 'carousel',
+        perView: 3,  // Tampilkan 3 gambar dalam satu tampilan di desktop
+        breakpoints: {
+            768: {
+                perView: 1 // Tampilkan 1 gambar di layar dengan lebar 768px ke bawah
+            }
+        },
+        autoplay: 2000 // Autoplay setiap 3 detik
+    }).mount();
+</script>
