@@ -1,6 +1,5 @@
 ---
-import '@glidejs/glide/dist/css/glide.core.min.css';
-import '@glidejs/glide/dist/css/glide.theme.min.css';
+
 ---
 
 <section id="product" class="px-8 lg:px-28">
@@ -49,19 +48,3 @@ import '@glidejs/glide/dist/css/glide.theme.min.css';
         </div>
     </div>
 </section>
-
-<script>
-    import Glide from '@glidejs/glide';
-
-    // Inisialisasi Glide.js dengan beberapa opsi
-    new Glide('.glide', {
-        type: 'carousel',
-        perView: 3,  // Tampilkan 3 gambar dalam satu tampilan di desktop
-        breakpoints: {
-            768: {
-                perView: 1 // Tampilkan 1 gambar di layar dengan lebar 768px ke bawah
-            }
-        },
-        autoplay: 2000 // Autoplay setiap 3 detik
-    }).mount();
-</script>
